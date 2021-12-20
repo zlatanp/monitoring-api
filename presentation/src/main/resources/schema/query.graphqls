@@ -1,0 +1,15 @@
+type Query{
+    allMonitoringData : [MonitoringData]
+}
+
+type Mutation{
+    addMonitoringData(temperature: Float) : String
+    startJob(name: String): String
+    stopJob(name: String): String
+}
+
+type MonitoringData{
+    id: String
+    temperature: Float
+    date: String
+}

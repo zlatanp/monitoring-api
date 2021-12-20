@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  monitoring-api:
+    image: monitoring-api
+    networks:
+      - my-network
+    ports:
+    - 8080:8080
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:9.2
+    networks:
+      - my-network
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dev
+
+networks:
+  my-network:
