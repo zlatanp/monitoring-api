@@ -15,3 +15,5 @@ GraphQL playground with query and mutation docs:
 http://localhost:8080/graphiql
 ```
 Supports GraphQL and Docker
+
+Database: PostgreSQL
